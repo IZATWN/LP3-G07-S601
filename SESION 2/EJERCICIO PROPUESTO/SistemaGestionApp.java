@@ -1,7 +1,7 @@
 package tp_01;
 import java.util.*;
 
-abstract class Persona {
+abstract class Persona { //CLASE ABSTRACTA
  protected static int contadorPersonas = 0;
  protected String id;
  protected String nombre;
@@ -19,11 +19,11 @@ abstract class Persona {
  }
 }
 
-interface Evaluador {
+interface Evaluador { //INTERFAZ
  void evaluar(Estudiante e, Curso c, double nota);
 }
 
-class Estudiante extends Persona {
+class Estudiante extends Persona { //HERENCIA
  private String carrera;
  private List<Curso> cursosMatriculados;
 
@@ -56,7 +56,7 @@ class Estudiante extends Persona {
  }
 }
 
-class Profesor extends Persona implements Evaluador {
+class Profesor extends Persona implements Evaluador {  //HERENCIA Y POLIMORFISMO de interfaz evaluador
  public Profesor(String id, String nombre) {
      super(id, nombre);
  }
@@ -74,7 +74,7 @@ class Profesor extends Persona implements Evaluador {
  }
 }
 
-class ProfesorAdjunto extends Profesor {
+class ProfesorAdjunto extends Profesor { //herencia de profesor
  private boolean esAdjunto;
 
  public ProfesorAdjunto(String id, String nombre) {
@@ -418,4 +418,5 @@ public class SistemaGestionApp {
      System.out.println("Saliendo.");
  }
 }
+
 
