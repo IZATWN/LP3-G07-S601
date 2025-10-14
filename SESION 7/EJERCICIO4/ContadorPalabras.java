@@ -7,16 +7,11 @@ import java.util.*;
 public class ContadorPalabras {
 
     public static void main(String[] args) {
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Selecciona el archivo de texto a analizar");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce la ruta del archivo de texto: ");
+        String ruta = scanner.nextLine();
+        File archivo = new File(ruta);
 
-        int opcion = fileChooser.showOpenDialog(null);
-        if (opcion != JFileChooser.APPROVE_OPTION) {
-            System.out.println("No se seleccionó ningún archivo. Programa terminado.");
-            return;
-        }
-
-        File archivo = fileChooser.getSelectedFile();
 
         if (!archivo.exists() || !archivo.canRead()) {
             JOptionPane.showMessageDialog(null, "El archivo no se puede leer o no existe.");
