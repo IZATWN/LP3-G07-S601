@@ -3,17 +3,16 @@ package EJERCICIO3;
 import java.io.*;
 import java.util.*;
 
-// =========================================
 // CLASE PRINCIPAL
-// =========================================
+
 public class EmpleadoMVC {
 
     private static final String ARCHIVO = "empleados.dat";
     private static final Scanner sc = new Scanner(System.in);
 
-    // =========================================
+
     // MODELO
-    // =========================================
+
     static class Empleado implements Serializable {
         private int numero;
         private String nombre;
@@ -38,9 +37,8 @@ public class EmpleadoMVC {
         }
     }
 
-    // =========================================
     // CONTROLADOR
-    // =========================================
+
     static class EmpleadoController {
 
         // Leer lista de empleados desde archivo
@@ -112,15 +110,13 @@ public class EmpleadoMVC {
         }
     }
 
-    // =========================================
     // VISTA / MENÚ
-    // =========================================
     public static void main(String[] args) {
         EmpleadoController controlador = new EmpleadoController();
         int opcion;
 
         do {
-            System.out.println("\n===== GESTIÓN DE EMPLEADOS =====");
+            System.out.println("\n===== GESTION DE EMPLEADOS =====");
             System.out.println("1. Listar todos los empleados");
             System.out.println("2. Agregar un nuevo empleado");
             System.out.println("3. Buscar empleado por número");
@@ -151,9 +147,7 @@ public class EmpleadoMVC {
         } while (opcion != 5);
     }
 
-    // =========================================
     // FUNCIONES AUXILIARES DE VISTA
-    // =========================================
     private static void agregarEmpleado(EmpleadoController controlador) {
         System.out.print("Ingrese número: ");
         int numero = leerEntero();
@@ -204,4 +198,5 @@ public class EmpleadoMVC {
         }
     }
 }
+
 
