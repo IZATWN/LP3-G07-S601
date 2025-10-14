@@ -1,4 +1,4 @@
-package Ejercicio3;
+package EJERCICIO3;
 
 import java.io.*;
 import java.util.*;
@@ -204,3 +204,4 @@ public class EmpleadoMVC {
         }
     }
 }
+
